@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tres en raya</title>
+    <link rel="stylesheet" href="./main.css" />
+    <script src="./main.js"></script>
+    <link rel="icon" href="./assets/images/icono.ico" />
+  </head>
+  <body>
+    <header>
+      <h1 onclick="reiniciar('titulo')">TRES EN RAYA</h1>
+    </header>
+    <section id="ajustes">
+      <div class="elige">
+        <p>Elige tu ficha:</p>
+      </div>
+
+      <div class="fichas">
+        <button class="fichas" id="bordeCruz" onclick="elegir_ficha('cruz')">
+          <p class="letra-fichas">X</p>
+        </button>
+        <button class="fichas" id="bordeCirculo" onclick="elegir_ficha('circulo')">
+          <p class="letra-fichas">0</p>  
+        </button>
+      </div>
+      
+        <div class="container">
+          <p id="empieza">Empiezas tu</p>
+          <label for="turno">
+            <input onclick="elegir_el_turno()" type="checkbox" name="turno" id="turno">
+            <span></span>
+           <i class="box"></i>
+          </label>
+        </div>
+      
+      <div class="dificultat">
+        <button id="facil" type="button" onclick="dificultat('facil')" >Fácil</button>
+        <button id="normal" type="button" onclick="dificultat('normal')" >Normal</button>
+        <button id="dificil" type="button" onclick="dificultat('dificil')" >Difícil</button>
+      </div>
+
+      <div class="play">
+        <button id="play" type="button" onclick="vista_juego()">
+          <p class="play">PLAY</p>
+        </button>
+      </div>
+    </section>
+    <section id="juego">
+
+      <div class="reiniciar">
+        <button id="reiniciar" onclick="reiniciar('boton')" type="button">
+          <p class="reiniciar">Reiniciar</p>
+        </button>
+      </div>
+
+      <p id="texto_victoria">Has ganado</p>
+
+      <div id="tablero">
+
+        <button id="0" class="boton_tablero"  type="button" onclick="poner_fichas(this)"></button>
+        <button id="1" class="boton_tablero" type="button" onclick="poner_fichas(this)"></button>
+        <button id="2" class="boton_tablero" type="button" onclick="poner_fichas(this)"></button>
+        <button id="3" class="boton_tablero" type="button" onclick="poner_fichas(this)"></button>
+        <button id="4"class="boton_tablero" type="button" onclick="poner_fichas(this)"></button>
+        <button id="5"class="boton_tablero" type="button" onclick="poner_fichas(this)"></button>
+        <button id="6" class="boton_tablero" type="button" onclick="poner_fichas(this)"></button>
+        <button id="7" class="boton_tablero" type="button" onclick="poner_fichas(this)"></button>
+        <button id="8" class="boton_tablero" type="button" onclick="poner_fichas(this)"></button>
+      </div>
+
+    </section>
+    <footer id="footer">
+      <p id="derechos">Página web desarrollada por: Esteban Bardolet Pomar</p>
+    </footer>
+  </body>
+</html>

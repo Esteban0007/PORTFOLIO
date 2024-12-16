@@ -1,0 +1,343 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+}
+a {
+  text-decoration: none;
+}
+@font-face {
+  font-family: "knewave-outline";
+  src: url(./assets/fonts/knewave-outline.TTF);
+}
+@font-face {
+  font-family: "knewave";
+  src: url(./assets/fonts/knewave.ttf);
+}
+
+@font-face {
+  font-family: "TheNeue-Black";
+  src: url(./assets/fonts/TheNeue-Black.ttf);
+}
+
+/*ESTILOS AJUSTES*/
+
+
+div.elige {
+  display: flex;
+  justify-content: center;
+  font-family: 'knewave-outline';
+  font-size: 45px;
+}
+.letra-fichas {
+  font-family: 'knewave';
+  color: gold;
+  font-size: 80px;
+  margin: 20px;
+}
+
+button.fichas {
+  border-radius: 7%;
+  border: solid 5px black;
+  margin: 20px;
+  padding: 20px;
+}
+
+button.fichas:hover {
+  border-radius: 7%;
+  border: solid 5px gold;
+}
+
+#cruz,
+#circulo {
+  height: 12em;
+  margin: 30px;
+  border-radius: 7%;
+}
+div.fichas {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 30px;
+  width: 100%;
+}
+  /*turnos*/
+  #empieza{
+    margin-bottom: 30px;
+    margin-top: -30px;
+    font-size: 60px;
+  }
+
+  div.container{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 40px;
+    margin-top: 50px;
+    transform: scale(.7);
+    font-family: 'knewave-outline';
+    font-size: 50px;
+  }
+  label {
+    position: relative;
+    cursor: pointer;
+
+  }
+  label input{
+    visibility: hidden;
+    display: none;
+  }
+
+  label span{
+    position: relative;
+    width: 230px;
+    height: 100px;
+    background-color: #141414;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 100px;
+    box-shadow: inset 0px 2px 5px white,
+    inset 0px 2px 2px white,
+    inset 0px -1px 1px white;
+  }
+
+  i.box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(to bottom,#444 ,#222);
+    border-radius: 100px;
+    box-shadow: 0 2px 20px rgb(0, 0, 0, .5);
+    inset: 0 -1px 1px rgba(225, 225, 225, .1);
+    transition: 3s;
+    transform: scale(.9);
+  }
+
+  label input:checked ~ .box{
+    left: 130px;
+  }
+
+  label .box::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: gold;
+    box-shadow: 0 1px 10px gold,
+    0 1px 20px gold,
+    0 1px 30px gold,
+    0 0 40px gold,
+    0 0 60px gold;
+    transition: 2s;
+  }
+
+  label input:checked ~ .box::before{
+    background: red;
+      box-shadow: 0 1px 10px red,
+        0 1px 20px red,
+        0 1px 30px red,
+        0 0 40px red,
+        0 0 60px red;
+  }
+ 
+
+
+/* DIFICULTAT*/
+
+
+div.dificultat{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+#facil {
+  padding: 20px;
+  font-family: 'TheNeue-Black';
+  font-size: 25px;
+  border-radius: 100%;
+}
+#normal {
+  padding: 20px;
+  font-family: 'TheNeue-Black';
+  font-size: 25px;
+  border-radius: 100%;
+}
+#dificil {
+  padding: 20px;
+  font-family: 'TheNeue-Black';
+  font-size: 25px;
+  border-radius: 100%;
+}
+
+#facil:hover{
+  border: solid 5px gold;
+  
+}
+#normal:hover {
+  border: solid 5px gold;
+}
+#dificil:hover {
+  border: solid 5px gold;
+}
+
+
+
+  /*play*/
+div.play {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+p.play {
+  padding: 20px;
+  font-family: 'knewave';
+  font-size: 50px;
+}
+
+p.play:hover {
+  border: solid 5px gold;
+} 
+
+
+
+
+/*ESTILOS JUEGO*/
+#juego {
+ display: none;
+}
+
+h1 {
+  font-family: "knewave";
+  font-size: 5em;
+  text-align: center;
+  color: gold;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+h1:hover{
+
+color: rgb(255, 162, 0);
+}
+
+#texto_victoria {
+  color: rgb(8, 235, 8);
+  font-family: "knewave";
+  font-size: 4em;
+  text-align: center;
+  display: none;
+  margin-bottom: 20px;
+}
+
+#tablero {
+  margin: auto;
+  width: 100%;
+  max-width: 650px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 150px;
+  object-fit: scale-down;
+}
+
+#tablero>button {
+  width: 200px;
+  height: 200px;
+  font-size: 10em;
+}
+
+/* Media Query para tablet en modo horizontal */
+@media (max-width: 1024px) and (orientation: landscape) {
+  #tablero>button {
+    width: 150px;
+    height: 150px;
+    font-size: 8em;
+  }
+}
+
+/* Media Query para tablet en modo vertical */
+@media (max-width: 768px) and (orientation: portrait) {
+  #tablero>button {
+    width: 150px;
+    height: 150px;
+    font-size: 8em;
+  }
+}
+
+/* Media Query para pantallas intermedias */
+@media (min-width: 900px) and (max-width: 1500px){
+  #tablero>button {
+    width: 200px;
+    height: 200px;
+    font-size: 8em;
+  }
+}
+
+/* Media Query para pantallas intermedias pequeñas */
+@media (min-width: 500px) and (max-width: 900px) {
+  #tablero>button {
+    width: 170px;
+    height: 170px;
+    font-size: 7em;
+  }
+}
+
+/* Media Query para pantallas aún más pequeñas */
+@media (max-width: 480px) {
+  #tablero>button {
+    width: 100px;
+    height: 100px;
+    font-size: 6em;
+  }
+}
+
+#reiniciar{
+  display: none;
+}
+div.reiniciar{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+p.reiniciar {
+  padding: 20px;
+  font-family: 'TheNeue-Black';
+  font-size: 50px;
+}
+
+p.reiniciar:hover {
+  border: solid 5px gold;
+}
+
+#footer{
+  height: 100px;
+  background-color: rgb(15, 15, 15);
+  display: flex;
+  margin-top: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+#derechos{
+  font-family: Arial, Helvetica, sans-serif;
+ 
+  margin-right: 50px;
+  background-color: rgb(15, 15, 15);
+}
