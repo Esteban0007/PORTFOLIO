@@ -1,0 +1,29 @@
+#######################################################################################################
+
+# READY API
+
+#######################################################################################################
+
+# Abstract
+
+AI READY API is an all-in-one neural search infrastructure designed to automate the entire semantic pipeline—from data ingestion to high-precision retrieval. It enables developers to integrate private, multilingual, and intelligent search into applications without the need for extensive Machine Learning expertise. By maximizing strategic embedding models and vector databases, the system bridges the gap between complex AI research and practical software engineering, providing a resource-efficient solution that prioritizes data privacy and low-latency performance on commodity hardware.
+
+# Context
+
+The inspiration of the project came when I realized the complexity of setting up a semantic search for a project. Instead of downloading models and testing them, set up the database and make everything work. I thought I could simplify and then I created the Json in and out api for semantic search.
+
+# LINK
+
+https://readyapi.net
+
+# API DOCS
+
+https://readyapi.net/api/docs
+
+# FINAL REPORT
+
+Is included in the repository.
+
+# CODE
+
+It is not included for now. If you are a recruiter, my email address is estebanforbusiness@gmail.com.
